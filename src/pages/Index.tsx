@@ -1,0 +1,580 @@
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  Star,
+  MapPin,
+  Phone,
+  Video,
+  Users,
+  Award,
+  CheckCircle,
+  Clock,
+  FileText,
+  Plane,
+  GraduationCap,
+  Heart,
+  Eye,
+  Search,
+  MessageCircle,
+  Trophy,
+  Shield,
+  Globe,
+  ArrowRight,
+  Calendar,
+  CheckCircle2,
+  TrendingUp,
+  UserCheck,
+  BookOpen,
+  Headphones,
+  Zap
+} from 'lucide-react';
+import mujtabaHeadshot from '@/assets/mujtaba.jpg';
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border/50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                <Shield className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-primary">Mujtaba Sarwar</h1>
+                <p className="text-sm text-muted-foreground">RCIC #R712505</p>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
+              <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+              <Button className="btn-primary">
+                <Phone className="mr-2 h-4 w-4" />
+                Free Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Enhanced Hero Section */}
+      <section className="bg-mesh relative overflow-hidden pt-16 pb-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Headshot */}
+            <div className="flex justify-center lg:justify-start fade-in">
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-hero rounded-3xl opacity-20 group-hover:opacity-30 transition-all duration-500 blur-xl"></div>
+                <img
+                  src={mujtabaHeadshot}
+                  alt="Mujtaba Sarwar - Canadian Immigration Consultant"
+                  className="relative w-100 h-100 object-cover rounded-2xl shadow-card-hover transition-all duration-500 group-hover:scale-105 group-hover:shadow-glow"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-xl shadow-accent badge-float">
+                  <div className="text-sm font-semibold">RCIC Licensed</div>
+                  <div className="text-xs">#R712505</div>
+                </div>
+                <div className="absolute top-4 left-4 bg-primary/10 backdrop-blur-sm border border-primary/20 px-3 py-1 rounded-full">
+                  <div className="text-xs text-primary font-medium flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-2 pulse-glow"></div>
+                    Available Now
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Enhanced Content */}
+            <div className="space-y-8 fade-in fade-in-delay-1">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-2 mb-4">
+                  <Badge variant="outline" className="border-accent text-accent">
+                    <TrendingUp className="mr-1 h-3 w-3" />
+                    Trusted by 500+ Clients
+                  </Badge>
+                  <Badge variant="outline" className="border-primary text-primary">
+                    <UserCheck className="mr-1 h-3 w-3" />
+                    80% Success Rate
+                  </Badge>
+                </div>
+                
+                <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
+                  Your Canadian Dream Starts
+                  <span className="bg-gradient-hero bg-clip-text text-transparent"> Here</span>
+                </h1>
+                <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed">
+                  Expert immigration guidance with transparent assessment. Free 30-minute consultations for qualified cases.
+                </p>
+                
+                <div className="flex items-center gap-4 flex-wrap">
+                  <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold interactive-hover">
+                    <Shield className="mr-2 h-4 w-4" />
+                    RCIC License #R712505
+                  </Badge>
+                  <Badge variant="outline" className="px-4 py-2 text-sm font-semibold border-accent text-accent interactive-hover">
+                    <Award className="mr-2 h-4 w-4" />
+                    CICC Member
+                  </Badge>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="btn-primary group h-16 text-lg">
+                    <Plane className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+                    Start Your Journey
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Button>
+                  <Button className="btn-accent group h-16 text-lg">
+                    <Calendar className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                    Book Free Call
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground flex items-center">
+                  <Clock className="mr-2 h-4 w-4" />
+                  Response within 24 hours • No hidden fees
+                </p>
+              </div>
+
+              {/* Enhanced Trust Signals */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-border/50">
+                <div className="text-center group trust-signal stagger-1">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-1">8+</div>
+                  <div className="text-sm text-muted-foreground font-medium">Years Experience</div>
+                </div>
+                <div className="text-center group trust-signal stagger-2">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-1">80%+</div>
+                  <div className="text-sm text-muted-foreground font-medium">Success Rate</div>
+                </div>
+                <div className="text-center group trust-signal stagger-3">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-1">500+</div>
+                  <div className="text-sm text-muted-foreground font-medium">Cases Won</div>
+                </div>
+                <div className="text-center group trust-signal stagger-4">
+                  <div className="text-3xl lg:text-4xl font-bold text-yellow-500 mb-1">4.9★</div>
+                  <div className="text-sm text-muted-foreground font-medium">Client Rating</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Services Section */}
+      <section id="services" className="py-20 relative">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <Badge variant="outline" className="mb-4 px-4 py-2">
+              <Globe className="mr-2 h-4 w-4" />
+              Professional Services
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Immigration Solutions</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Comprehensive immigration services with transparent pricing and proven results
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Permanent Residency Services */}
+            <Card className="card-hover fade-in fade-in-delay-1 group relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-primary/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors">
+                    <Plane className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-1">Permanent Residency</h3>
+                    <p className="text-muted-foreground">Your path to Canadian citizenship</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center group/item">
+                    <CheckCircle2 className="h-5 w-5 text-primary mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <span className="text-base">Express Entry</span>
+                  </div>
+                  <div className="flex items-center group/item">
+                    <CheckCircle2 className="h-5 w-5 text-primary mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <span className="text-base">Provincial Nominee Program (PNP)</span>
+                  </div>
+                  <div className="flex items-center group/item">
+                    <CheckCircle2 className="h-5 w-5 text-primary mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <span className="text-base">Category-Based Draws</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-subtle p-4 rounded-xl mb-6 border border-primary/10">
+                  <div className="text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">$4,500</div>
+                  <div className="text-muted-foreground font-medium text-sm">Complete service in 3 phases</div>
+                  <div className="text-xs text-muted-foreground mt-1">✓ No hidden fees ✓ Success guarantee</div>
+                </div>
+
+                <Button className="btn-primary w-full group">
+                  <span>Get Started</span>
+                  <Trophy className="ml-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Status Services */}
+            <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-light"></div>
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-accent/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-accent/20 transition-colors duration-300">
+                    <FileText className="h-8 w-8 text-accent group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-1">Status Services</h3>
+                    <p className="text-muted-foreground">Maintain your legal status</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/5 transition-colors duration-200 group/item">
+                    <span className="flex items-center">
+                      <CheckCircle2 className="h-4 w-4 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                      <span className="text-sm">PGWP</span>
+                    </span>
+                    <Badge variant="secondary" className="font-semibold text-xs">$1,500</Badge>
+                  </div>
+                  <div className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/5 transition-colors duration-200 group/item">
+                    <span className="flex items-center">
+                      <CheckCircle2 className="h-4 w-4 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                      <span className="text-sm">Study Permits</span>
+                    </span>
+                    <Badge variant="secondary" className="font-semibold text-xs">$2,000</Badge>
+                  </div>
+                  <div className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/5 transition-colors duration-200 group/item">
+                    <span className="flex items-center">
+                      <CheckCircle2 className="h-4 w-4 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                      <span className="text-sm">LMIA</span>
+                    </span>
+                    <Badge variant="secondary" className="font-semibold text-xs">$5,000</Badge>
+                  </div>
+                  <div className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/5 transition-colors duration-200 group/item">
+                    <span className="flex items-center">
+                      <CheckCircle2 className="h-4 w-4 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                      <span className="text-sm">Spousal Sponsorship</span>
+                    </span>
+                    <Badge variant="secondary" className="font-semibold text-xs">$3,500</Badge>
+                  </div>
+                  <div className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/5 transition-colors duration-200 group/item">
+                    <span className="flex items-center">
+                      <CheckCircle2 className="h-4 w-4 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                      <span className="text-sm">Visitor Records</span>
+                    </span>
+                    <Badge variant="secondary" className="font-semibold text-xs">$800</Badge>
+                  </div>
+                  <div className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/5 transition-colors duration-200 group/item">
+                    <span className="flex items-center">
+                      <CheckCircle2 className="h-4 w-4 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                      <span className="text-sm">Application Reviews</span>
+                    </span>
+                    <Badge variant="secondary" className="font-semibold text-xs">$500</Badge>
+                  </div>
+                </div>
+
+                <Button className="btn-accent w-full group">
+                  <span>View All Services</span>
+                  <Eye className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* RCIC Mentorship Program */}
+            <Card className="card-hover fade-in fade-in-delay-3 group relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-yellow-600"></div>
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-yellow-500/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-yellow-500/20 transition-colors duration-300">
+                    <GraduationCap className="h-8 w-8 text-yellow-600 group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-1">RCIC Mentorship</h3>
+                    <p className="text-muted-foreground">Guidance for new consultants</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center group/item">
+                    <CheckCircle2 className="h-5 w-5 text-yellow-600 mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <span className="text-base">Case Strategy</span>
+                  </div>
+                  <div className="flex items-center group/item">
+                    <CheckCircle2 className="h-5 w-5 text-yellow-600 mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <span className="text-base">Business Setup</span>
+                  </div>
+                  <div className="flex items-center group/item">
+                    <CheckCircle2 className="h-5 w-5 text-yellow-600 mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <span className="text-base">Professional Development</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-subtle p-4 rounded-xl mb-6 border border-yellow-500/10">
+                  <div className="text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">$2,500</div>
+                  <div className="text-muted-foreground font-medium text-sm">3-month comprehensive program</div>
+                  <div className="text-xs text-muted-foreground mt-1">✓ One-on-one mentoring ✓ Business guidance</div>
+                </div>
+
+                <Button className="w-full group bg-yellow-600 hover:bg-yellow-700 text-white">
+                  <span>Learn More</span>
+                  <GraduationCap className="ml-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Why Choose Section */}
+      <section id="about" className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Mujtaba</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Licensed professional with proven track record and transparent approach
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Video Placeholder */}
+            <div className="fade-in fade-in-delay-1">
+              <div className="aspect-video bg-muted rounded-xl flex items-center justify-center shadow-card relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
+                <div className="text-center relative z-10">
+                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Video className="h-10 w-10 text-primary" />
+                  </div>
+                  <p className="text-muted-foreground font-medium">Introduction Video Coming Soon</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Credentials and Bio */}
+            <div className="space-y-8 fade-in fade-in-delay-2">
+              <div>
+                <h3 className="text-2xl font-bold mb-6">Licensed & Certified</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center p-4 bg-white rounded-xl shadow-sm border border-border/50">
+                    <Badge className="bg-primary text-primary-foreground mr-4">RCIC</Badge>
+                    <div>
+                      <div className="font-semibold">Regulated Canadian Immigration Consultant</div>
+                      <div className="text-sm text-muted-foreground">License #R712505</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center p-4 bg-white rounded-xl shadow-sm border border-border/50">
+                    <Badge className="bg-accent text-accent-foreground mr-4">CICC</Badge>
+                    <div>
+                      <div className="font-semibold">College of Immigration and Citizenship Consultants</div>
+                      <div className="text-sm text-muted-foreground">Professional Member</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold mb-4">About Mujtaba</h4>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  With over 8 years of experience in Canadian immigration law, Mujtaba Sarwar has successfully guided hundreds of clients through their immigration journey. Based in Mississauga, Ontario, he provides personalized service with a commitment to transparency and results.
+                </p>
+                <div className="flex items-center text-muted-foreground">
+                  <MapPin className="h-5 w-5 mr-2" />
+                  <span>Mississauga, Ontario, Canada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced How It Works */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">How It Works</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Simple 3-step process to achieve your Canadian immigration goals
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center fade-in fade-in-delay-1 group">
+              <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                <Search className="h-10 w-10 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Step 1: Assessment</h3>
+              <p className="text-muted-foreground mb-6">
+                Take our comprehensive eligibility quiz to understand your options
+              </p>
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground group">
+                Take the Quiz
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </div>
+
+            <div className="text-center fade-in fade-in-delay-2 group">
+              <div className="bg-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MessageCircle className="h-10 w-10 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Step 2: Consultation</h3>
+              <p className="text-muted-foreground mb-6">
+                Free 30-minute consultation to discuss your personalized strategy
+              </p>
+              <Button className="btn-primary group">
+                Book Free Call
+                <Calendar className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+              </Button>
+            </div>
+
+            <div className="text-center fade-in fade-in-delay-3 group">
+              <div className="bg-accent w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Trophy className="h-10 w-10 text-accent-foreground" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Step 3: Success</h3>
+              <p className="text-muted-foreground mb-6">
+                Professional application filing with ongoing support until approval
+              </p>
+              <Button className="btn-accent group">
+                Get Started
+                <Zap className="ml-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Testimonials */}
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Client Success Stories</h2>
+            <div className="flex items-center justify-center space-x-1 mb-4">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <Star key={star} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
+              ))}
+              <span className="ml-2 text-lg font-semibold">4.9 out of 5</span>
+            </div>
+            <p className="text-muted-foreground">Based on 120+ Google Reviews</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {[
+              {
+                name: "Sarah Chen",
+                rating: 5,
+                comment: "Mujtaba made my PR application seamless. His expertise and guidance were invaluable throughout the entire process.",
+                service: "Permanent Residency"
+              },
+              {
+                name: "Ahmed Hassan",
+                rating: 5,
+                comment: "Professional, knowledgeable, and always responsive. Got my PGWP extension approved within weeks!",
+                service: "PGWP Extension"
+              },
+              {
+                name: "Maria Rodriguez",
+                rating: 5,
+                comment: "Transparent pricing and excellent results. Highly recommend for anyone serious about Canadian immigration.",
+                service: "Express Entry"
+              }
+            ].map((review, index) => (
+              <Card key={index} className="card-hover fade-in" style={{ animationDelay: `${0.2 * (index + 1)}s` }}>
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                      <span className="font-semibold text-primary">{review.name.charAt(0)}</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-semibold">{review.name}</div>
+                      <div className="text-sm text-muted-foreground">{review.service}</div>
+                      <div className="flex mt-1">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground italic">"{review.comment}"</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center fade-in fade-in-delay-3">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Eye className="mr-2 h-4 w-4" />
+              View All Reviews on Google
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Final Call to Action */}
+      <section id="contact" className="py-20 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto fade-in">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
+              Ready to Start Your Canadian Journey?
+            </h2>
+            <p className="text-xl text-primary-foreground/90 mb-8">
+              Limited weekly slots available. Get expert guidance for your Canadian immigration journey.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <Phone className="h-8 w-8 text-accent mx-auto mb-3" />
+                <h3 className="font-semibold text-primary-foreground mb-2">Phone Consultation</h3>
+                <p className="text-primary-foreground/80 text-sm">Direct call with immediate response</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <Video className="h-8 w-8 text-accent mx-auto mb-3" />
+                <h3 className="font-semibold text-primary-foreground mb-2">Video Call</h3>
+                <p className="text-primary-foreground/80 text-sm">Face-to-face consultation online</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <Users className="h-8 w-8 text-accent mx-auto mb-3" />
+                <h3 className="font-semibold text-primary-foreground mb-2">In-Person</h3>
+                <p className="text-primary-foreground/80 text-sm">Visit our Mississauga office</p>
+              </div>
+            </div>
+
+            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center mb-8">
+              <Button className="bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto text-lg">
+                <Search className="mr-2 h-5 w-5" />
+                Take the Eligibility Quiz
+              </Button>
+              <Button variant="outline" className="border-primary-foreground text-black hover:bg-primary-foreground hover:text-primary w-full sm:w-auto text-lg">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Contact Us
+              </Button>
+            </div>
+
+            <div className="flex justify-center space-x-8 text-primary-foreground/80">
+              <div className="flex items-center">
+                <Clock className="h-5 w-5 mr-2" />
+                <span>24/7 Response</span>
+              </div>
+              <div className="flex items-center">
+                <Shield className="h-5 w-5 mr-2" />
+                <span>Licensed RCIC</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 mr-2" />
+                <span>Success Guarantee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Index;

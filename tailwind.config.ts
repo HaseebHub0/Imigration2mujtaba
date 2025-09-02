@@ -66,7 +66,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Montserrat', 'system-ui', 'sans-serif'],
+				sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

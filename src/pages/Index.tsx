@@ -64,17 +64,26 @@ const Index = () => {
 
       {/* Dedicated Hero Section */}
       <section className="bg-gradient-hero relative overflow-hidden min-h-screen flex items-center">
-        {/* Background Image Overlay */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
+        {/* Background Video */}
+        <video 
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/videos/canadian-flag.mp4" type="video/mp4" />
+          <source src="https://player.vimeo.com/external/4262794.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6a&profile_id=174" type="video/mp4" />
+          {/* Fallback image if video doesn't load */}
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
+        </video>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center space-y-8 fade-in">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                Your Canadian Dream
-                <span className="block text-white bg-clip-text text-transparent">
-                  Starts Here
-                </span>
+                Your Canadian Dream <br></br> Starts Here
+                
               </h1>
 
               <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">

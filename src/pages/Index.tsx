@@ -66,8 +66,7 @@ const Index = () => {
       <section className="bg-gradient-hero relative overflow-hidden min-h-screen flex items-center">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
-        <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center space-y-8 fade-in">
             <div className="space-y-6">
@@ -212,6 +211,10 @@ const Index = () => {
             {/* Permanent Residency Services */}
             <Card className="card-hover fade-in fade-in-delay-1 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
+              {/* Banner Image */}
+              <div className="h-32 bg-[url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="bg-primary/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors">
@@ -254,6 +257,10 @@ const Index = () => {
             {/* Status Services */}
             <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
+              {/* Banner Image */}
+              <div className="h-32 bg-[url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="bg-accent/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-accent/20 transition-colors duration-300">
@@ -320,6 +327,10 @@ const Index = () => {
             {/* RCIC Mentorship Program */}
             <Card className="card-hover fade-in fade-in-delay-3 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
+              {/* Banner Image */}
+              <div className="h-32 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="bg-accent/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-accent/20 transition-colors duration-300">
@@ -546,124 +557,154 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Success Stories & Image Gallery */}
+      {/* Blogs & News Updates */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Success Stories & Gallery</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Latest Blogs & News</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real clients, real results. See the faces behind our success stories.
+              Stay updated with the latest immigration news, policy changes, and expert insights.
             </p>
           </div>
 
-          {/* Image Gallery Grid */}
+          {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {/* Client Success Photo 1 */}
-            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-1">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Trophy className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">PR Approved!</h3>
-                  <p className="text-sm text-muted-foreground">Ahmed & Family</p>
+            {/* Blog Post 1 */}
+            <Card className="card-hover fade-in fade-in-delay-1 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">News</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 15, 2024</span>
                 </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">"Got our PR in just 6 months!"</p>
-              </div>
-            </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  New Express Entry Draw Results - December 2024
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Latest CRS scores and invitation numbers for all Express Entry categories...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
 
-            {/* Client Success Photo 2 */}
-            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-2">
-              <div className="aspect-[4/3] bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap className="h-8 w-8 text-accent" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Study Permit</h3>
-                  <p className="text-sm text-muted-foreground">Maria Rodriguez</p>
+            {/* Blog Post 2 */}
+            <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">Guide</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 12, 2024</span>
                 </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">"Now studying at UofT!"</p>
-              </div>
-            </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  Complete Guide to PGWP Extension 2024
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Everything you need to know about extending your Post-Graduation Work Permit...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
 
-            {/* Client Success Photo 3 */}
-            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-3">
-              <div className="aspect-[4/3] bg-gradient-to-br from-yellow-500/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-8 w-8 text-yellow-600" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Family Reunion</h3>
-                  <p className="text-sm text-muted-foreground">Chen Family</p>
+            {/* Blog Post 3 */}
+            <Card className="card-hover fade-in fade-in-delay-3 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">Policy</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 10, 2024</span>
                 </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">"Finally together in Canada!"</p>
-              </div>
-            </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  PNP Updates: Ontario Invites 1,200 Candidates
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Ontario Provincial Nominee Program latest draw results and requirements...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
 
-            {/* Office/Consultation Photo */}
-            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-4">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="font-semibold text-white mb-2">Consultation</h3>
-                  <p className="text-sm text-white/80">Professional Meeting</p>
+            {/* Blog Post 4 */}
+            <Card className="card-hover fade-in fade-in-delay-4 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">Tips</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 8, 2024</span>
                 </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">"Expert guidance every step"</p>
-              </div>
-            </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  5 Common PR Application Mistakes to Avoid
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Learn from our experience: avoid these costly mistakes in your PR application...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
 
-            {/* Certificate/License Photo */}
-            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-5">
-              <div className="aspect-[4/3] bg-gradient-to-br from-accent/30 to-primary/30 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="font-semibold text-white mb-2">RCIC License</h3>
-                  <p className="text-sm text-white/80">#R712505</p>
+            {/* Blog Post 5 */}
+            <Card className="card-hover fade-in fade-in-delay-5 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">Success</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 5, 2024</span>
                 </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">"Fully licensed & certified"</p>
-              </div>
-            </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  Client Success: From Study Permit to PR in 18 Months
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Real case study: How we helped a client achieve their Canadian dream...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
 
-            {/* Canada Landmark Photo */}
-            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-6">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Mississauga</h3>
-                  <p className="text-sm text-muted-foreground">Our Location</p>
+            {/* Blog Post 6 */}
+            <Card className="card-hover fade-in fade-in-delay-6 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">Update</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 3, 2024</span>
                 </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">"Serving clients nationwide"</p>
-              </div>
-            </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  IRCC Processing Times Update - December 2024
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Latest processing times for all immigration applications and what to expect...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Call to Action for Gallery */}
+          {/* Call to Action for Blogs */}
           <div className="text-center fade-in fade-in-delay-7">
             <p className="text-muted-foreground mb-6">
-              Want to be our next success story? Let's discuss your Canadian immigration journey.
+              Stay informed with the latest immigration updates. Subscribe to our newsletter for expert insights.
             </p>
-            <Button className="btn-primary group">
-              <Camera className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              Share Your Success Story
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+              <Button className="btn-primary group">
+                <BookOpen className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                View All Blogs
+              </Button>
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Subscribe Newsletter
+              </Button>
+            </div>
           </div>
         </div>
       </section>

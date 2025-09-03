@@ -75,7 +75,7 @@ const Index = () => {
           loop 
           playsInline
         >
-          <source src="/videos/canadian-flag.mp4" type="video/mp4" />
+          <source src="/videos/hero.mp4" type="video/mp4" />
           <source src="https://player.vimeo.com/external/4262794.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6a&profile_id=174" type="video/mp4" />
           {/* Fallback image if video doesn't load */}
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
@@ -270,7 +270,7 @@ const Index = () => {
             <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
               {/* Banner Image */}
-              <div className="h-32 bg-cover bg-center relative" style={{backgroundImage: `url(${statusResidence})`}}>
+              <div className="h-32 bg-cover bg-center relative" style={{backgroundImage: `url('https://www.twomads.com/uploads/1/4/6/2/146288433/filling-canadian-visa-application_orig.png')`}}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <CardContent className="p-8">
@@ -591,7 +591,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Blog Post 1 */}
             <Card className="card-hover fade-in fade-in-delay-1 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://i0.wp.com/www.canadafornewbies.com/wp-content/uploads/2020/12/Express-Entry-Draw-feature.png?w=940&ssl=1')`}}></div>
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
                   <Badge variant="outline" className="text-xs">News</Badge>
@@ -611,7 +611,7 @@ const Index = () => {
 
             {/* Blog Post 2 */}
             <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://ekannimmigration.com/wp-content/uploads/2022/04/Post-Graduation-Work-Permit.jpg')`}}></div>
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
                   <Badge variant="outline" className="text-xs">Guide</Badge>
@@ -631,7 +631,7 @@ const Index = () => {
 
             {/* Blog Post 3 */}
             <Card className="card-hover fade-in fade-in-delay-3 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://www.canadavisa.com/storage/images/canada-pnp.jpg')`}}></div>
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
                   <Badge variant="outline" className="text-xs">Policy</Badge>
@@ -651,7 +651,7 @@ const Index = () => {
 
             {/* Blog Post 4 */}
             <Card className="card-hover fade-in fade-in-delay-4 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://www.immigrations.com.sg/wp-content/uploads/2017/10/Why-Is-Your-PR-Application-Rejected.jpg')`}}></div>
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
                   <Badge variant="outline" className="text-xs">Tips</Badge>
@@ -671,7 +671,7 @@ const Index = () => {
 
             {/* Blog Post 5 */}
             <Card className="card-hover fade-in fade-in-delay-5 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://www.internationalexperience.ca/wp-content/uploads/2021/02/Work-Permit-Canada-300x197.jpg')`}}></div>
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
                   <Badge variant="outline" className="text-xs">Success</Badge>
@@ -691,7 +691,7 @@ const Index = () => {
 
             {/* Blog Post 6 */}
             <Card className="card-hover fade-in fade-in-delay-6 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://www.cicnews.com/wp-content/uploads/2018/08/permanent-residence-application-canada-ircc.jpg')`}}></div>
               <CardContent className="p-6">
                 <div className="flex items-center mb-3">
                   <Badge variant="outline" className="text-xs">Update</Badge>

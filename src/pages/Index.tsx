@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import LocationMap from '@/components/LocationMap';
 import permResidence from '/perm residence.webp';
 import statusResidence from '/status residence.jpeg';
 import rcicMentorship from '/rcic.jpeg';
@@ -395,7 +396,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Video */}
             <div className="fade-in fade-in-delay-1">
               <div className="aspect-video rounded-xl shadow-card relative overflow-hidden">
@@ -437,10 +438,38 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   With over 8 years of experience in Canadian immigration law, Mujtaba Sarwar has successfully guided hundreds of clients through their immigration journey. Based in Mississauga, Ontario, he provides personalized service with a commitment to transparency and results.
                 </p>
-                <div className="flex items-center text-muted-foreground">
-                  <MapPin className="h-5 w-5 mr-2" />
-                  <span>Mississauga, Ontario, Canada</span>
+              
+              </div>
+            </div>
+          </div>
+
+          {/* Location Map Section */}
+          <div className="fade-in fade-in-delay-3">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">Visit Our Office</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Located in the heart of Mississauga, Ontario. Schedule an in-person consultation or visit us for expert immigration guidance.
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="h-96 rounded-xl shadow-card overflow-hidden border border-border/50">
+                <LocationMap className="h-full" />
+              </div>
+              <div className="mt-6 text-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <Button className="btn-primary group">
+                    <MapPin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                    Get Directions
+                  </Button>
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Book In-Person Meeting
+                  </Button>
                 </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  <MapPin className="inline h-4 w-4 mr-1" />
+                  Mississauga, Ontario, Canada • Free parking available
+                </p>
               </div>
             </div>
           </div>
@@ -752,15 +781,15 @@ const Index = () => {
 
             <div className="flex justify-center space-x-8 text-primary-foreground/80">
               <div className="flex items-center">
-                <Clock className="h-5 w-5 mr-2" />
+                {/* <Clock className="h-5 w-5 mr-2" /> */}
                 <span>24/7 Response</span>
               </div>
               <div className="flex items-center">
-                <Shield className="h-5 w-5 mr-2" />
+                {/* <Shield className="h-5 w-5 mr-2" /> */}
                 <span>Licensed RCIC</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-5 w-5 mr-2" />
+                {/* <CheckCircle className="h-5 w-5 mr-2" /> */}
                 <span>Success Guarantee</span>
               </div>
             </div>

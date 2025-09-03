@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import permResidence from '/perm residence.webp';
 import statusResidence from '/status residence.jpeg';
-import rcicMentorship from '/RCIC mentoship.jpeg';
+import rcicMentorship from '/rcic.jpeg';
 import {
   Star,
   MapPin,
@@ -34,7 +34,7 @@ import {
   Zap,
   Camera
 } from 'lucide-react';
-import mujtabaHeadshot from '@/assets/mujtaba.jpg';
+import mujtabaHeadshot from '@/assets/Mujtaba.jpg';
 
 const Index = () => {
   return (
@@ -91,7 +91,7 @@ const Index = () => {
 
               <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 Expert immigration guidance with transparent assessment.
-                <span className="font-semibold text-accent"><br></br>Free 30-minute consultations</span> for qualified cases.
+                <span className="font-semibold text-white"><br></br>Free 30-minute consultations</span> for qualified cases.
               </p>
             </div>
 
@@ -113,7 +113,7 @@ const Index = () => {
                 <div className="text-white/80 font-medium">Years Experience</div>
               </div>
               <div className="text-center trust-signal stagger-2">
-                <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">80%+</div>
+                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">80%+</div>
                 <div className="text-white/80 font-medium">Success Rate</div>
               </div>
               <div className="text-center trust-signal stagger-3">
@@ -224,7 +224,7 @@ const Index = () => {
             <Card className="card-hover fade-in fade-in-delay-1 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
               {/* Banner Image */}
-              <div className="h-32 bg-cover bg-center relative" style={{backgroundImage: `url(${permResidence})`}}>
+              <div className="h-32 bg-cover bg-center relative" style={{backgroundImage: `url("https://sbnri.com/blog/wp-content/uploads/2022/05/PR-card.jpeg")`}}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <CardContent className="p-8">
@@ -662,26 +662,6 @@ const Index = () => {
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   Learn from our experience: avoid these costly mistakes in your PR application...
-                </p>
-                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
-                  Read More <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Blog Post 5 */}
-            <Card className="card-hover fade-in fade-in-delay-5 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://www.internationalexperience.ca/wp-content/uploads/2021/02/Work-Permit-Canada-300x197.jpg')`}}></div>
-              <CardContent className="p-6">
-                <div className="flex items-center mb-3">
-                  <Badge variant="outline" className="text-xs">Success</Badge>
-                  <span className="text-xs text-muted-foreground ml-2">Dec 5, 2024</span>
-                </div>
-                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
-                  Client Success: From Study Permit to PR in 18 Months
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Real case study: How we helped a client achieve their Canadian dream...
                 </p>
                 <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
                   Read More <ArrowRight className="ml-1 h-4 w-4" />

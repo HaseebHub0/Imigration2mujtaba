@@ -28,7 +28,8 @@ import {
   UserCheck,
   BookOpen,
   Headphones,
-  Zap
+  Zap,
+  Camera
 } from 'lucide-react';
 import mujtabaHeadshot from '@/assets/mujtaba.jpg';
 
@@ -61,10 +62,75 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Enhanced Hero Section */}
-      <section className="bg-mesh relative overflow-hidden pt-16 pb-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      {/* Dedicated Hero Section */}
+      <section className="bg-gradient-hero relative overflow-hidden min-h-screen flex items-center">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center space-y-8 fade-in">
+            <div className="space-y-6">
+              <Badge variant="outline" className="border-accent text-accent px-6 py-2 text-lg font-semibold">
+                <Shield className="mr-2 h-5 w-5" />
+                Licensed RCIC #R712505
+              </Badge>
+              
+              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
+                Your Canadian Dream
+                <span className="block text-white bg-clip-text text-transparent">
+                  Starts Here
+                </span>
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Expert immigration guidance with transparent assessment. 
+                <span className="font-semibold text-accent">Free 30-minute consultations</span> for qualified cases.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button className="btn-accent group h-16 text-xl px-12">
+                <Plane className="mr-3 h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
+                Start Your Journey
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+              <Button variant="outline" className="border-white text-primary hover:bg-white hover:text-primary h-16 text-xl px-12">
+                <Calendar className="mr-3 h-6 w-6" />
+                Book Free Call
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12 max-w-4xl mx-auto">
+              <div className="text-center trust-signal stagger-1">
+                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">8+</div>
+                <div className="text-white/80 font-medium">Years Experience</div>
+              </div>
+              <div className="text-center trust-signal stagger-2">
+                <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">80%+</div>
+                <div className="text-white/80 font-medium">Success Rate</div>
+              </div>
+              <div className="text-center trust-signal stagger-3">
+                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">500+</div>
+                <div className="text-white/80 font-medium">Cases Won</div>
+              </div>
+              <div className="text-center trust-signal stagger-4">
+                <div className="text-4xl lg:text-5xl font-bold text-yellow-400 mb-2">4.9★</div>
+                <div className="text-white/80 font-medium">Client Rating</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-accent/20 rounded-full blur-xl float"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary/20 rounded-full blur-xl float-delay"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-lg pulse-glow"></div>
+      </section>
+
+      {/* About Section with Headshot */}
+      <section className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Headshot */}
             <div className="flex justify-center lg:justify-start fade-in">
@@ -91,23 +157,12 @@ const Index = () => {
             {/* Right: Enhanced Content */}
             <div className="space-y-8 fade-in fade-in-delay-1">
               <div className="space-y-6">
-                <div className="flex items-center space-x-2 mb-4">
-                  <Badge variant="outline" className="border-accent text-accent">
-                    <TrendingUp className="mr-1 h-3 w-3" />
-                    Trusted by 500+ Clients
-                  </Badge>
-                  <Badge variant="outline" className="border-primary text-primary">
-                    <UserCheck className="mr-1 h-3 w-3" />
-                    80% Success Rate
-                  </Badge>
-                </div>
-                
-                <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Your Canadian Dream Starts
-                  <span className="bg-gradient-hero bg-clip-text text-transparent"> Here</span>
-                </h1>
-                <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed">
-                  Expert immigration guidance with transparent assessment. Free 30-minute consultations for qualified cases.
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+                  Meet Mujtaba Sarwar
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Licensed Canadian Immigration Consultant with over 8 years of experience helping families 
+                  achieve their Canadian dreams. Transparent, professional, and results-driven approach.
                 </p>
                 
                 <div className="flex items-center gap-4 flex-wrap">
@@ -124,40 +179,20 @@ const Index = () => {
 
               <div className="space-y-4">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="btn-primary group h-16 text-lg">
-                    <Plane className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
-                    Start Your Journey
+                  <Button className="btn-primary group h-14 text-lg">
+                    <MessageCircle className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                    Get Free Assessment
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
-                  <Button className="btn-accent group h-16 text-lg">
-                    <Calendar className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                    Book Free Call
+                  <Button className="btn-accent group h-14 text-lg">
+                    <Phone className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                    Call Now
                   </Button>
                 </div>
                 <p className="text-sm text-muted-foreground flex items-center">
                   <Clock className="mr-2 h-4 w-4" />
                   Response within 24 hours • No hidden fees
                 </p>
-              </div>
-
-              {/* Enhanced Trust Signals */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-border/50">
-                <div className="text-center group trust-signal stagger-1">
-                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-1">8+</div>
-                  <div className="text-sm text-muted-foreground font-medium">Years Experience</div>
-                </div>
-                <div className="text-center group trust-signal stagger-2">
-                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-1">80%+</div>
-                  <div className="text-sm text-muted-foreground font-medium">Success Rate</div>
-                </div>
-                <div className="text-center group trust-signal stagger-3">
-                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-1">500+</div>
-                  <div className="text-sm text-muted-foreground font-medium">Cases Won</div>
-                </div>
-                <div className="text-center group trust-signal stagger-4">
-                  <div className="text-3xl lg:text-4xl font-bold text-yellow-500 mb-1">4.9★</div>
-                  <div className="text-sm text-muted-foreground font-medium">Client Rating</div>
-                </div>
               </div>
             </div>
           </div>
@@ -195,15 +230,15 @@ const Index = () => {
 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center group/item">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <CheckCircle2 className="h-5 w-5 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
                     <span className="text-base">Express Entry</span>
                   </div>
                   <div className="flex items-center group/item">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <CheckCircle2 className="h-5 w-5 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
                     <span className="text-base">Provincial Nominee Program (PNP)</span>
                   </div>
                   <div className="flex items-center group/item">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <CheckCircle2 className="h-5 w-5 text-accent mr-3 group-hover/item:scale-110 transition-transform duration-200" />
                     <span className="text-base">Category-Based Draws</span>
                   </div>
                 </div>
@@ -223,11 +258,11 @@ const Index = () => {
 
             {/* Status Services */}
             <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-light"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="bg-accent/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-accent/20 transition-colors duration-300">
-                    <FileText className="h-8 w-8 text-accent group-hover:scale-110 transition-transform duration-300" />
+                    <FileText className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-1">Status Services</h3>
@@ -280,7 +315,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <Button className="btn-accent w-full group">
+                <Button className="btn-primary w-full group">
                   <span>View All Services</span>
                   <Eye className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
                 </Button>
@@ -289,11 +324,11 @@ const Index = () => {
 
             {/* RCIC Mentorship Program */}
             <Card className="card-hover fade-in fade-in-delay-3 group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-yellow-600"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-light"></div>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="bg-yellow-500/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-yellow-500/20 transition-colors duration-300">
-                    <GraduationCap className="h-8 w-8 text-yellow-600 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="bg-accent/10 backdrop-blur-sm p-3 rounded-xl mr-4 group-hover:bg-accent/20 transition-colors duration-300">
+                    <GraduationCap className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-1">RCIC Mentorship</h3>
@@ -303,15 +338,15 @@ const Index = () => {
 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center group/item">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-600 mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <CheckCircle2 className="h-5 w-5 text-[#63a67b] mr-3 group-hover/item:scale-110 transition-transform duration-200" />
                     <span className="text-base">Case Strategy</span>
                   </div>
                   <div className="flex items-center group/item">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-600 mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <CheckCircle2 className="h-5 w-5 text-[#63a67b] mr-3 group-hover/item:scale-110 transition-transform duration-200" />
                     <span className="text-base">Business Setup</span>
                   </div>
                   <div className="flex items-center group/item">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-600 mr-3 group-hover/item:scale-110 transition-transform duration-200" />
+                    <CheckCircle2 className="h-5 w-5 text-[#63a67b] mr-3 group-hover/item:scale-110 transition-transform duration-200" />
                     <span className="text-base">Professional Development</span>
                   </div>
                 </div>
@@ -322,7 +357,7 @@ const Index = () => {
                   <div className="text-xs text-muted-foreground mt-1">✓ One-on-one mentoring ✓ Business guidance</div>
                 </div>
 
-                <Button className="w-full group bg-yellow-600 hover:bg-yellow-700 text-white">
+                <Button className="btn-primary w-full group">
                   <span>Learn More</span>
                   <GraduationCap className="ml-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
                 </Button>
@@ -343,16 +378,17 @@ const Index = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Video Placeholder */}
+            {/* Video */}
             <div className="fade-in fade-in-delay-1">
-              <div className="aspect-video bg-muted rounded-xl flex items-center justify-center shadow-card relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
-                <div className="text-center relative z-10">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Video className="h-10 w-10 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground font-medium">Introduction Video Coming Soon</p>
-                </div>
+              <div className="aspect-video rounded-xl shadow-card relative overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/TTShPU3Bm7A"
+                  title="Why Choose Mujtaba - Introduction Video"
+                  className="w-full h-full rounded-xl"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
 
@@ -515,6 +551,128 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Success Stories & Image Gallery */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Success Stories & Gallery</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Real clients, real results. See the faces behind our success stories.
+            </p>
+          </div>
+
+          {/* Image Gallery Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* Client Success Photo 1 */}
+            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-1">
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">PR Approved!</h3>
+                  <p className="text-sm text-muted-foreground">Ahmed & Family</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white text-sm">"Got our PR in just 6 months!"</p>
+              </div>
+            </div>
+
+            {/* Client Success Photo 2 */}
+            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-2">
+              <div className="aspect-[4/3] bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <GraduationCap className="h-8 w-8 text-accent" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Study Permit</h3>
+                  <p className="text-sm text-muted-foreground">Maria Rodriguez</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white text-sm">"Now studying at UofT!"</p>
+              </div>
+            </div>
+
+            {/* Client Success Photo 3 */}
+            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-3">
+              <div className="aspect-[4/3] bg-gradient-to-br from-yellow-500/20 to-accent/20 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Heart className="h-8 w-8 text-yellow-600" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Family Reunion</h3>
+                  <p className="text-sm text-muted-foreground">Chen Family</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white text-sm">"Finally together in Canada!"</p>
+              </div>
+            </div>
+
+            {/* Office/Consultation Photo */}
+            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-4">
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-white mb-2">Consultation</h3>
+                  <p className="text-sm text-white/80">Professional Meeting</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white text-sm">"Expert guidance every step"</p>
+              </div>
+            </div>
+
+            {/* Certificate/License Photo */}
+            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-5">
+              <div className="aspect-[4/3] bg-gradient-to-br from-accent/30 to-primary/30 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-white mb-2">RCIC License</h3>
+                  <p className="text-sm text-white/80">#R712505</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white text-sm">"Fully licensed & certified"</p>
+              </div>
+            </div>
+
+            {/* Canada Landmark Photo */}
+            <div className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-500 fade-in fade-in-delay-6">
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Mississauga</h3>
+                  <p className="text-sm text-muted-foreground">Our Location</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white text-sm">"Serving clients nationwide"</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action for Gallery */}
+          <div className="text-center fade-in fade-in-delay-7">
+            <p className="text-muted-foreground mb-6">
+              Want to be our next success story? Let's discuss your Canadian immigration journey.
+            </p>
+            <Button className="btn-primary group">
+              <Camera className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+              Share Your Success Story
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Final Call to Action */}
       <section id="contact" className="py-20 bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
@@ -550,7 +708,7 @@ const Index = () => {
                 <Search className="mr-2 h-5 w-5" />
                 Take the Eligibility Quiz
               </Button>
-              <Button variant="outline" className="border-primary-foreground text-black hover:bg-primary-foreground hover:text-primary w-full sm:w-auto text-lg">
+              <Button variant="outline" className="border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary w-full sm:w-auto text-lg">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Contact Us
               </Button>

@@ -2,25 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Canadian Immigration Consulting Design System
-   All colors MUST be HSL. Canadian theme with navy, white, and maple red.
+/* Modern Immigration Consulting Design System
+   All colors MUST be HSL. Modern theme with teal (#144d5e) and sage green (#63a67b).
 */
 
 @layer base {
   :root {
-    /* Canadian Theme Colors - Navy, White, Maple Red */
+    /* Modern Teal & Sage Green Theme */
     --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    --foreground: 195 65% 22%;
     
-    /* Canadian Navy Primary */
-    --primary: 215 100% 20%;
+    /* Teal Primary (#144d5e) */
+    --primary: 195 65% 22%;
     --primary-foreground: 0 0% 98%;
-    --primary-light: 215 60% 35%;
+    --primary-light: 195 45% 35%;
     
-    /* Maple Red Accent */
-    --accent: 0 85% 55%;
+    /* Sage Green Accent (#63a67b) */
+    --accent: 145 25% 52%;
     --accent-foreground: 0 0% 98%;
-    --accent-light: 0 85% 65%;
+    --accent-light: 145 30% 62%;
     
     /* Clean Grays */
     --secondary: 210 10% 96%;
@@ -38,26 +38,28 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 210 15% 88%;
-    --input: 210 15% 94%;
-    --ring: 215 100% 20%;
+    --border: 195 15% 88%;
+    --input: 195 15% 94%;
+    --ring: 195 65% 22%;
     
     /* Design System Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 100% 20%) 0%, hsl(215 80% 25%) 50%, hsl(215 60% 35%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(0 85% 55%) 0%, hsl(0 75% 60%) 50%, hsl(0 65% 65%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 10% 98%) 50%, hsl(210 15% 96%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 10% 99%) 100%);
-    --gradient-mesh: radial-gradient(circle at 20% 50%, hsl(215 100% 95% / 0.3) 0%, transparent 50%), 
-                     radial-gradient(circle at 80% 20%, hsl(0 85% 95% / 0.3) 0%, transparent 50%),
-                     radial-gradient(circle at 40% 80%, hsl(215 60% 95% / 0.2) 0%, transparent 50%);
+    --gradient-hero: linear-gradient(135deg, hsl(195 65% 22%) 0%, hsl(195 55% 30%) 50%, hsl(195 45% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(145 25% 52%) 0%, hsl(145 30% 58%) 50%, hsl(145 35% 62%) 100%);
+    --gradient-teal-sage: linear-gradient(135deg, hsl(195 65% 22%) 0%, hsl(170 40% 40%) 50%, hsl(145 25% 52%) 100%);
+    --gradient-sage-teal: linear-gradient(135deg, hsl(145 25% 52%) 0%, hsl(170 40% 40%) 50%, hsl(195 65% 22%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(195 20% 98%) 50%, hsl(195 15% 96%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(195 10% 99%) 100%);
+    --gradient-mesh: radial-gradient(circle at 20% 50%, hsl(195 65% 95% / 0.3) 0%, transparent 50%), 
+                     radial-gradient(circle at 80% 20%, hsl(145 25% 95% / 0.3) 0%, transparent 50%),
+                     radial-gradient(circle at 40% 80%, hsl(170 40% 95% / 0.2) 0%, transparent 50%);
     
     /* Enhanced Shadows */
-    --shadow-card: 0 4px 20px -2px hsl(215 25% 27% / 0.1), 0 0 0 1px hsl(210 15% 88% / 0.5);
-    --shadow-card-hover: 0 8px 40px -4px hsl(215 25% 27% / 0.2), 0 0 0 1px hsl(210 15% 85% / 0.8);
-    --shadow-button: 0 4px 15px -2px hsl(215 100% 20% / 0.4), inset 0 1px 0 hsl(215 100% 30% / 0.2);
-    --shadow-accent: 0 8px 30px -4px hsl(0 85% 55% / 0.5), inset 0 1px 0 hsl(0 85% 65% / 0.3);
-    --shadow-glow: 0 0 40px hsl(215 100% 20% / 0.15);
-    --shadow-inner: inset 0 2px 4px hsl(215 25% 27% / 0.06);
+    --shadow-card: 0 4px 20px -2px hsl(195 65% 22% / 0.1), 0 0 0 1px hsl(195 15% 88% / 0.5);
+    --shadow-card-hover: 0 8px 40px -4px hsl(195 65% 22% / 0.2), 0 0 0 1px hsl(195 15% 85% / 0.8);
+    --shadow-button: 0 4px 15px -2px hsl(195 65% 22% / 0.4), inset 0 1px 0 hsl(195 65% 30% / 0.2);
+    --shadow-accent: 0 8px 30px -4px hsl(145 25% 52% / 0.5), inset 0 1px 0 hsl(145 25% 62% / 0.3);
+    --shadow-glow: 0 0 40px hsl(195 65% 22% / 0.15);
+    --shadow-inner: inset 0 2px 4px hsl(195 65% 22% / 0.06);
     
     /* Advanced Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -291,6 +293,14 @@
   
   .bg-gradient-accent {
     background: var(--gradient-accent);
+  }
+  
+  .bg-gradient-teal-sage {
+    background: var(--gradient-teal-sage);
+  }
+  
+  .bg-gradient-sage-teal {
+    background: var(--gradient-sage-teal);
   }
   
   .bg-gradient-subtle {

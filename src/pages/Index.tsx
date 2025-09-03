@@ -68,19 +68,8 @@ const Index = () => {
 
       {/* Dedicated Hero Section */}
       <section className="bg-gradient-hero relative overflow-hidden min-h-screen flex items-center">
-        {/* Background Video */}
-        <video 
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-          <source src="https://player.vimeo.com/external/4262794.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6a&profile_id=174" type="video/mp4" />
-          {/* Fallback image if video doesn't load */}
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
-        </video>
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('/Hero.jpg')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center space-y-8 fade-in">

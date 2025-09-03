@@ -71,21 +71,16 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center space-y-8 fade-in">
             <div className="space-y-6">
-              <Badge variant="outline" className="border-accent text-accent px-6 py-2 text-lg font-semibold">
-                <Shield className="mr-2 h-5 w-5" />
-                Licensed RCIC #R712505
-              </Badge>
-              
               <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
                 Your Canadian Dream
                 <span className="block text-white bg-clip-text text-transparent">
                   Starts Here
                 </span>
               </h1>
-              
+
               <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Expert immigration guidance with transparent assessment. 
-                <span className="font-semibold text-accent">Free 30-minute consultations</span> for qualified cases.
+                Expert immigration guidance with transparent assessment.
+                <span className="font-semibold text-accent"><br></br>Free 30-minute consultations</span> for qualified cases.
               </p>
             </div>
 
@@ -121,7 +116,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-accent/20 rounded-full blur-xl float"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary/20 rounded-full blur-xl float-delay"></div>
@@ -161,10 +156,10 @@ const Index = () => {
                   Meet Mujtaba Sarwar
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Licensed Canadian Immigration Consultant with over 8 years of experience helping families 
+                  Licensed Canadian Immigration Consultant with over 8 years of experience helping families
                   achieve their Canadian dreams. Transparent, professional, and results-driven approach.
                 </p>
-                
+
                 <div className="flex items-center gap-4 flex-wrap">
                   <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold interactive-hover">
                     <Shield className="mr-2 h-4 w-4" />

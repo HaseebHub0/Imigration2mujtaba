@@ -627,25 +627,6 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Blog Post 2 */}
-            <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
-              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://ekannimmigration.com/wp-content/uploads/2022/04/Post-Graduation-Work-Permit.jpg')`}}></div>
-              <CardContent className="p-6">
-                <div className="flex items-center mb-3">
-                  <Badge variant="outline" className="text-xs">Guide</Badge>
-                  <span className="text-xs text-muted-foreground ml-2">Dec 12, 2024</span>
-                </div>
-                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
-                  Complete Guide to PGWP Extension 2024
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Everything you need to know about extending your Post-Graduation Work Permit...
-                </p>
-                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
-                  Read More <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
 
             {/* Blog Post 3 */}
             <Card className="card-hover fade-in fade-in-delay-3 group relative overflow-hidden">
@@ -667,6 +648,29 @@ const Index = () => {
               </CardContent>
             </Card>
 
+
+            {/* Blog Post 2 */}
+            <Card className="card-hover fade-in fade-in-delay-2 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://ekannimmigration.com/wp-content/uploads/2022/04/Post-Graduation-Work-Permit.jpg')`}}></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">Guide</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 12, 2024</span>
+                </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  Complete Guide to PGWP Extension 2024
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Everything you need to know about extending your Post-Graduation Work Permit...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            
+
             {/* Blog Post 4 */}
             <Card className="card-hover fade-in fade-in-delay-4 group relative overflow-hidden">
               <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://www.immigrations.com.sg/wp-content/uploads/2017/10/Why-Is-Your-PR-Application-Rejected.jpg')`}}></div>
@@ -680,6 +684,26 @@ const Index = () => {
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   Learn from our experience: avoid these costly mistakes in your PR application...
+                </p>
+                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  Read More <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Blog Post 5 */}
+            <Card className="card-hover fade-in fade-in-delay-5 group relative overflow-hidden">
+              <div className="aspect-[4/3] bg-cover bg-center" style={{backgroundImage: `url('https://www.internationalexperience.ca/wp-content/uploads/2021/02/Work-Permit-Canada.jpg')`}}></div>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Badge variant="outline" className="text-xs">Family</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Dec 5, 2024</span>
+                </div>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  Spousal Sponsorship: Complete 2024 Guide
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Everything you need to know about sponsoring your spouse for Canadian PR...
                 </p>
                 <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
                   Read More <ArrowRight className="ml-1 h-4 w-4" />
